@@ -1,0 +1,57 @@
+// code pour le laboratoir #3 (poisson avec ligne et petites bulles)
+void setup()
+{
+  size(900,900);
+   background(#77F0DA);
+   noStroke();
+  int y;
+  int num=14;
+    fill(255);
+    y=60;
+    for(int i=0;i<num/1;i++){
+      rect(505,y,450,5);
+      y+=90;
+    }
+    for (int i=10;i<width;i+=10){
+  if((i%50)==0){
+    stroke(50);
+    ellipse(750,55,150,150);
+  }else{
+    stroke(50);
+    ellipse(808,700,80,80);
+  }
+    if((i%15)==0){
+    stroke(50);
+    ellipse(500,620,60,60);
+  }else{
+  
+    stroke(50);
+      ellipse(105,380,100,100);
+  }
+  }
+ {
+}
+stroke(50);
+beginShape();
+  fill(#F1F545);
+  curve(150,80,95,175,450,350,150,1150);
+  curve(350,-900,95,178,450,350,-100,-600);
+  endShape();
+ beginShape(); 
+ fill(#45D6BC);
+  curve(100,200,93,175,375,10,-390,-1200);
+  curve(1100,500,93,175,375,10,100,90);
+  curve(100,200,93,175,550,90,-500,-1290);
+  curve(1150,450,93,175,550,90,500,10);
+  fill(0);
+ beginShape(); 
+ fill(#45D6BC);
+  curve(500,200,300,350,175,450,10,200);
+  curve(1000,500,300,350,175,450,1300,90);
+  fill(0);
+  ellipse(395,345,25,20);
+ textAlign(DOWN);
+ textSize(40);
+ text("Sous l'océan!",width/2,height/2);
+  saveFrame();
+}
