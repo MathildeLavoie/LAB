@@ -1,0 +1,19 @@
+//projet 5 avec 2 éléments d'image qui se mélange
+PImage img;
+PImage imgMask;
+void setup(){
+size(600,350);
+img = loadImage("chienH.jpg");
+imgMask= loadImage("chienH.jpg");
+img.mask(imgMask);
+imageMode(CENTER);
+}
+void draw(){
+  background(0,102,153);
+  image(img,width/2,height/2);
+  image(img,mouseX,mouseY);
+  image(img,0,0);
+filter(POSTERIZE,4);
+filter(INVERT);
+saveFrame();
+}
